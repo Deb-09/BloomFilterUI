@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API = "http://localhost:8080/api/users";
+const API = import.meta.env.VITE_API_URL;
 
 function useDebounce(value, delay) {
   const [debounced, setDebounced] = useState(value);
