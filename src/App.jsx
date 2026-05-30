@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api/users";
 
 function useDebounce(value, delay) {
   const [debounced, setDebounced] = useState(value);
@@ -246,6 +246,9 @@ const styles = {
     outline: "none",
     boxSizing: "border-box",
     transition: "border-color 0.2s",
+  },
+  image:{
+    width: "120px",
   },
   icon: {
     position: "absolute",
